@@ -75,7 +75,7 @@
                     }
                 ],
                 "indexed": false,
-                "internalType": "struct BoatsailAuction.Auction",
+                "internalType": "struct EVMAuction.Auction",
                 "name": "auction",
                 "type": "tuple"
             }
@@ -147,7 +147,7 @@
                     }
                 ],
                 "indexed": false,
-                "internalType": "struct BoatsailAuction.Auction",
+                "internalType": "struct EVMAuction.Auction",
                 "name": "auction",
                 "type": "tuple"
             }

@@ -1,7 +1,7 @@
 /* eslint-disable prefer-const */
 import { Collection, Pair, Event, Item } from '../generated/schema'
-import { CollectionCreated, ItemListed, ItemDelisted, Swapped } from '../generated/BoatsailMarket/BoatsailMarket'
-import { BoatsailNFT as BoatsailNFTTemplate } from '../generated/templates'
+import { CollectionCreated, ItemListed, ItemDelisted, Swapped } from '../generated/EVMMarket/EVMMarket'
+import { EVMNFT as EVMNFTTemplate } from '../generated/templates'
 import { constants } from '@amxx/graphprotocol-utils'
 
 export function handleCollectionCreated(event: CollectionCreated): void {
@@ -15,7 +15,7 @@ export function handleCollectionCreated(event: CollectionCreated): void {
   entity.owner = event.params.owner
   entity.isPublic = event.params.isPublic
 
-  BoatsailNFTTemplate.create(event.params.collection_address)
+  EVMNFTTemplate.create(event.params.collection_address)
   entity.save()
 }
 

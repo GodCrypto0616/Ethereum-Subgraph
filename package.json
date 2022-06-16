@@ -1,5 +1,5 @@
 {
-  "name": "boatsailnft-subgraph",
+  "name": "EVMnft-subgraph",
   "version": "1.0.0",
   "repository": "",
   "license": "GPL-3.0-or-later",
@@ -7,9 +7,9 @@
     "codegen": "graph codegen --output-dir src/generated/",
     "auth": "graph auth https://api.thegraph.com/deploy/ d586fc7c16614002a489620b8a60090c",
     "build": "graph build",
-    "create-local": "graph create --node http://127.0.0.1:8020 rinkeby/BoatsailNFT",
-    "deploy": "graph deploy godcrypto/boatsail-nft --ipfs https://api.thegraph.com/ipfs/ --node https://api.thegraph.com/deploy/ --debug",    
-    "deploy-local": "graph deploy --node http://127.0.0.1:8020 --ipfs http://localhost:5001 rinkeby/BoatsailNFT" 
+    "create-local": "graph create --node http://127.0.0.1:8020 rinkeby/EVMNFT",
+    "deploy": "graph deploy godcrypto/EVM-nft --ipfs https://api.thegraph.com/ipfs/ --node https://api.thegraph.com/deploy/ --debug",    
+    "deploy-local": "graph deploy --node http://127.0.0.1:8020 --ipfs http://localhost:5001 rinkeby/EVMNFT" 
   },
   "devDependencies": {
     "@amxx/graphprotocol-utils": "0.0.6-2",

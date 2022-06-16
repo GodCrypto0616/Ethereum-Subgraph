@@ -1,6 +1,6 @@
 /* eslint-disable prefer-const */
 import { Auction, Bid, Event, Item } from '../generated/schema'
-import { BidSuccess, AuctionCreated, AuctionCanceled,AuctionFinalized} from '../generated/BoatsailAuction/BoatsailAuction'
+import { BidSuccess, AuctionCreated, AuctionCanceled,AuctionFinalized} from '../generated/EVMAuction/EVMAuction'
 import { constants } from '@amxx/graphprotocol-utils'
 
 export function handleBidSuccess(event: BidSuccess): void {

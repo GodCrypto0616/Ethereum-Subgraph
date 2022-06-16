@@ -1,27 +1,27 @@
 specVersion: 0.0.2
-description: BoatsailNFT Marketplace on EVM Based Blockchain Such as Rinkeby.
+description: EVMNFT Marketplace on EVM Based Blockchain Such as Rinkeby.
 repository: 
 schema:
   file: ./schema.graphql
 dataSources:
   - kind: ethereum/contract
-    name: BoatsailMarket # Market Contract
+    name: EVMMarket # Market Contract
     network: rinkeby
     source:
       address: '0x74d759207a4049e6ba517fe04cf2c76556276eea'
-      abi: BoatsailMarket
+      abi: EVMMarket
       startBlock: 10740865
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
       language: wasm/assemblyscript
-      file: ./src/mappings/BoatsailMarket.ts
+      file: ./src/mappings/EVMMarket.ts
       entities:
         - Collection
         - Pair        
       abis:
-        - name: BoatsailMarket
-          file: ./abis/BoatsailMarket.json
+        - name: EVMMarket
+          file: ./abis/EVMMarket.json
       eventHandlers:
         - event: CollectionCreated(address,address,bool)
           handler: handleCollectionCreated 
@@ -32,23 +32,23 @@ dataSources:
         - event: Swapped(address,(uint256,address,uint256,address,address,address,uint256,uint256,bool))
           handler: handleSwapped
   - kind: ethereum/contract
-    name: BoatsailAuction #Auction Contract
+    name: EVMAuction #Auction Contract
     network: rinkeby
     source:
       address: '0x81c702fa13a6c14a7bb4b982d03991c29184199d'
-      abi: BoatsailAuction
+      abi: EVMAuction
       startBlock: 10740939
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
       language: wasm/assemblyscript
-      file: ./src/mappings/BoatsailAuction.ts
+      file: ./src/mappings/EVMAuction.ts
       entities:
         - Auction
         - Bid
       abis:
-        - name: BoatsailAuction
-          file: ./abis/BoatsailAuction.json
+        - name: EVMAuction
+          file: ./abis/EVMAuction.json
       eventHandlers:
         - event: BidSuccess(address,uint256,address,uint256,uint256)
           handler: handleBidSuccess 
@@ -60,20 +60,20 @@ dataSources:
           handler: handleAuctionFinalized        
 templates:
   - kind: ethereum/contract
-    name: BoatsailNFT # NFT contract 
+    name: EVMNFT # NFT contract 
     network: rinkeby
     source:
-      abi: BoatsailNFT      
+      abi: EVMNFT      
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
       language: wasm/assemblyscript
-      file: ./src/mappings/BoatsailNFT.ts
+      file: ./src/mappings/EVMNFT.ts
       entities:
         - Item
       abis:
-        - name: BoatsailNFT
-          file: ./abis/BoatsailNFT.json
+        - name: EVMNFT
+          file: ./abis/EVMNFT.json
       eventHandlers:
         - event: ItemCreated(uint256,address,string,uint256)
           handler: handleItemCreated        

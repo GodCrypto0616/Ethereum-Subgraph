@@ -1,6 +1,6 @@
 /* eslint-disable prefer-const */
 import { Item, Event, Collection} from '../generated/schema'
-import { ItemCreated, Transfer } from '../generated/templates/BoatsailNFT/BoatsailNFT'
+import { ItemCreated, Transfer } from '../generated/templates/EVMNFT/EVMNFT'
 import { constants } from '@amxx/graphprotocol-utils'
 
 export function handleTransfer(event: Transfer): void

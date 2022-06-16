@@ -180,7 +180,7 @@
                     }
                 ],
                 "indexed": false,
-                "internalType": "struct BoatsailMarket.Pair",
+                "internalType": "struct EVMMarket.Pair",
                 "name": "pair",
                 "type": "tuple"
             }
